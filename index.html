@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BİRER · 0 ve 2. El Kombi & Petek Satışı</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .product-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+        .category-pill { transition: all 0.3s ease; }
+        .active-category { background-color: #2563eb; color: white; }
+    </style>
+</head>
+<body class="bg-[#fcfcfd] text-[#1a1a1a]">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-[100] glass border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="login.html" class="group flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-blue-600 transition-colors">
+                    <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                        <i class="fa-solid fa-user-shield text-xs"></i>
+                    </div>
+                    <span>Giriş</span>
+                </a>
+            </div>
+
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-gray-900 flex items-center gap-1">
+                BİRER<span class="text-blue-600">.</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-10">
+                <a href="#products" class="text-[15px] font-semibold text-gray-600 hover:text-blue-600 transition-colors">Ürünler</a>
+                <a href="#about" class="text-[15px] font-semibold text-gray-600 hover:text-blue-600 transition-colors">Hakkımızda</a>
+                <a href="#contact" class="px-6 py-2.5 bg-gray-900 text-white text-[14px] font-bold rounded-full hover:bg-blue-600 transition-all active:scale-95 shadow-lg shadow-gray-200">
+                    İletişim
+                </a>
+            </nav>
+
+            <button class="md:hidden text-gray-900" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars-staggered text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-40 pb-24 md:pt-56 md:pb-32 px-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-bold mb-8 animate-fade-in">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                GÜVENİLİR YEREL İŞLETME · RAMAZAN BİRER
+            </div>
+            <h1 class="text-5xl md:text-7xl font-[800] text-gray-900 mb-8 leading-[1.1] tracking-tight">
+                Eviniz İçin Modern <br/> <span class="text-blue-600">Isıtma Çözümleri</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+                BİRER ailesi olarak 0 ve 2. el kombi & petekleri titizlikle test ediyor, en uygun fiyatlarla evinize ulaştırıyoruz.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#products" class="px-10 py-5 bg-blue-600 text-white rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 active:scale-[0.98]">
+                    Ürünleri Keşfet
+                </a>
+                <a href="#contact" class="px-10 py-5 bg-white text-gray-900 border border-gray-200 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all active:scale-[0.98]">
+                    Bize Ulaşın
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-12 border-y border-gray-100 bg-white/50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-gray-900 mb-1">100%</div>
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Test Edildi</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-gray-900 mb-1">5+</div>
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Yıllık Deneyim</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-gray-900 mb-1">0 & 2. El</div>
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Geniş Stok</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-gray-900 mb-1">Uygun</div>
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Fiyat Garantisi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-32 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-10 mb-20">
+                <div class="max-w-xl">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Ürün Kataloğumuz</h2>
+                    <p class="text-gray-500 font-medium">İhtiyacınıza en uygun, bakımları yapılmış ve çalışmaya hazır ürünlerimizi inceleyin.</p>
+                </div>
+                <div class="flex p-1.5 bg-gray-100 rounded-2xl gap-1">
+                    <button onclick="filterProducts('all')" class="category-pill active-category px-8 py-3 rounded-xl text-sm font-bold">Hepsi</button>
+                    <button onclick="filterProducts('kombi')" class="category-pill px-8 py-3 rounded-xl text-sm font-bold text-gray-500 hover:text-gray-900">Kombiler</button>
+                    <button onclick="filterProducts('petek')" class="category-pill px-8 py-3 rounded-xl text-sm font-bold text-gray-500 hover:text-gray-900">Petekler</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+                <!-- Products will be loaded here via JS -->
+                <div class="col-span-full py-20 text-center">
+                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-blue-600 border-t-transparent"></div>
+                    <p class="mt-4 text-gray-500 font-medium">Ürünler yükleniyor...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-6 bg-white overflow-hidden">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <!-- Sol Taraf: Görsel Alanı (Mavi Arka Planlı Çerçeve) -->
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-blue-100 rounded-[3rem] rotate-2 group-hover:rotate-1 transition-transform duration-500 shadow-xl"></div>
+                    <div class="relative bg-blue-50 rounded-[2.5rem] w-full aspect-square shadow-2xl flex items-center justify-center overflow-hidden border border-blue-100">
+                        <!-- Köşedeki Logo Kartı (Görsel 1'deki gibi) -->
+                        <div class="absolute bottom-6 right-6 bg-gray-900 text-white p-8 rounded-[2rem] shadow-2xl transform transition-transform group-hover:scale-105 duration-500 z-10">
+                            <div class="text-4xl font-extrabold mb-1 italic text-blue-500">BİRER</div>
+                            <div class="text-[10px] font-bold text-gray-400 tracking-[0.3em] uppercase whitespace-nowrap">Isıtma Sistemleri</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ Taraf: Metin Alanı (Görsel 2'deki gibi) -->
+                <div class="max-w-xl">
+                    <h2 class="text-5xl font-bold text-gray-900 mb-10 tracking-tight">Hakkımızda</h2>
+                    <div class="space-y-8 text-gray-600 text-lg font-medium leading-relaxed">
+                        <p>BİRER, ısıtma sektöründe yılların verdiği tecrübeyle hizmet veren bir aile şirketidir. 2. el ve sıfır kombi & petek alım-satımında uzmanız.</p>
+                        <p>Her ürünümüzü titizlikle seçer, teknik kontrollerini yapar ve test ederek müşterilerimize sunarız. Amacımız; dürüst ticaret ve uygun fiyatlarla kaliteli ısınma çözümleri sağlamaktır.</p>
+                        
+                        <!-- Uyarı Kutusu (Görsel 2'deki gibi) -->
+                        <div class="relative p-10 bg-amber-50 rounded-[2.5rem] border-l-[12px] border-amber-400 shadow-sm mt-12">
+                            <p class="text-amber-900 font-bold italic text-xl leading-relaxed">
+                                "İşletmemiz sadece perakende satış yapmaktadır. Ücretsiz montaj ve bakım hizmetimiz bulunmamaktadır."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-32 pb-16 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-20 mb-20">
+                <div>
+                    <h3 class="text-3xl font-extrabold mb-8 italic">BİRER<span class="text-blue-500">.</span></h3>
+                    <p class="text-gray-400 font-medium leading-relaxed mb-10">
+                        Eviniz için en temiz ve bakımlı ısıtma sistemleri. Yılların tecrübesi, dürüst ticaret anlayışı.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-blue-600 transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-blue-600 transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-8 text-blue-500 uppercase tracking-widest">İletişim</h4>
+                    <ul class="space-y-6 font-medium text-gray-300">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot text-blue-500 mt-1"></i>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Cumhuriyet+Mah.,+Darcan+Sok.,+Lüleburgaz,+Kırklareli" target="_blank" class="hover:text-blue-400 transition-colors">
+                                Cumhuriyet Mah., Darcan Sok.<br/>Lüleburgaz, Kırklareli
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fa-solid fa-phone text-blue-500"></i>
+                            <a href="tel:+905353418567" class="hover:text-blue-400 transition-colors">0535 341 85 67</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-8 text-blue-500 uppercase tracking-widest">WhatsApp</h4>
+                    <p class="text-gray-400 mb-8 font-medium">Ürünler hakkında hızlı bilgi almak için bize WhatsApp'tan yazabilirsiniz.</p>
+                    <a href="https://wa.me/905353418567" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-green-600 text-white rounded-2xl font-bold hover:bg-green-700 transition-all shadow-xl shadow-green-900/20 active:scale-95">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        Mesaj Gönder
+                    </a>
+                </div>
+            </div>
+            <div class="pt-16 border-t border-white/5 text-center">
+                <p class="text-gray-500 text-sm font-bold uppercase tracking-widest">&copy; 2026 BİRER ISITMA SİSTEMLERİ · TÜM HAKLARI SAKLIDIR</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        async function getProducts() {
+            try {
+                const response = await fetch('api/products.php');
+                if (!response.ok) throw new Error('API not available');
+                return await response.json();
+            } catch (error) {
+                console.warn('API Çalışmıyor (Yerel Mod Aktif):', error.message);
+                const localProducts = JSON.parse(localStorage.getItem('birer_products')) || [];
+                return localProducts;
+            }
+        }
+
+        function renderProducts(products) {
+            const grid = document.getElementById('products-grid');
+            if (!products || products.length === 0) {
+                grid.innerHTML = '<div class="col-span-full py-20 text-center text-gray-400 font-bold uppercase tracking-widest italic">Henüz ürün bulunmuyor veya sunucu bağlantısı yok.</div>';
+                return;
+            }
+            grid.innerHTML = products.map(p => {
+                let images = [];
+                try {
+                    images = typeof p.images === 'string' ? JSON.parse(p.images) : p.images;
+                } catch(e) { images = [p.images]; }
+                const firstImage = images && images.length > 0 ? images[0] : 'https://picsum.photos/400/400?text=Resim+Yok';
+
+                return `
+                <a href="product-details.html?id=${p.id}" class="product-card group bg-white rounded-[2rem] border border-gray-100 overflow-hidden">
+                    <div class="aspect-square relative overflow-hidden bg-gray-50 p-6">
+                        <img src="${firstImage}" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://picsum.photos/400/400?text=Resim+Yok'">
+                        <div class="absolute top-6 left-6 flex gap-2">
+                            <span class="px-4 py-1.5 rounded-full text-[10px] font-[800] uppercase tracking-wider ${parseInt(p.is_new) ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}">
+                                ${parseInt(p.is_new) ? 'SIFIR' : '2. EL'}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">${p.name}</h3>
+                                <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-1">${p.category}</p>
+                            </div>
+                            <div class="text-2xl font-black text-gray-900">${new Intl.NumberFormat('tr-TR').format(p.price)} <span class="text-sm font-bold">₺</span></div>
+                        </div>
+                        <div class="flex items-center gap-2 text-blue-600 font-bold text-sm">
+                            <span>İncele</span>
+                            <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+                </a>
+            `}).join('');
+        }
+
+        async function filterProducts(category) {
+            const allProducts = await getProducts();
+            
+            // Update UI pills
+            document.querySelectorAll('.category-pill').forEach(btn => {
+                btn.classList.remove('active-category');
+                btn.classList.add('text-gray-500');
+                if (btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText.toLowerCase() === 'hepsi')) {
+                    btn.classList.add('active-category');
+                    btn.classList.remove('text-gray-500');
+                }
+            });
+
+            // Filter logic
+            if (category === 'all') renderProducts(allProducts);
+            else renderProducts(allProducts.filter(p => p.category === category));
+        }
+
+        // Initial render
+        window.onload = async () => {
+            const products = await getProducts();
+            renderProducts(products);
+        };
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            // Mobile menu implementation if needed
+        });
+    </script>
+</body>
+</html>

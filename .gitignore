@@ -1,0 +1,11 @@
+# Gereksiz dosyalar
+.DS_Store
+Thumbs.db
+*.log
+
+# VS Code ayarları
+.vscode/
+
+# Local server kalıntıları
+node_modules/
+package-lock.json

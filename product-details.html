@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Detayları · BİRER</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        #main-img { transition: opacity 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-[#fcfcfd] text-[#1a1a1a]">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-[100] glass border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-gray-900 flex items-center gap-1">
+                BİRER<span class="text-blue-600">.</span>
+            </a>
+            <a href="index.html#products" class="text-[14px] font-bold text-gray-400 hover:text-gray-900 transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left text-xs"></i> Ürünlere Dön
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24 px-6">
+        <div class="container mx-auto">
+            <div class="bg-white rounded-[3rem] border border-gray-100 shadow-sm overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <!-- Images Grid -->
+                    <div class="p-8 lg:p-16 bg-gray-50 border-r border-gray-100 space-y-6">
+                        <div class="aspect-square rounded-[3rem] bg-gray-50 overflow-hidden border border-gray-100 p-12">
+                            <img id="main-img" src="" class="w-full h-full object-contain hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <!-- Thumbnail Gallery -->
+                        <div id="image-gallery" class="flex flex-wrap gap-4">
+                            <!-- Thumbnails will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 lg:p-20 flex flex-col">
+                        <div class="mb-10">
+                            <div id="condition-badge" class="inline-block px-5 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em] bg-amber-100 text-amber-700 mb-6">
+                                2. El Ürün
+                            </div>
+                            <h1 id="product-name" class="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight tracking-tight">Hermetik Kombi 24 kW</h1>
+                            <div class="flex flex-wrap gap-8">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center"><i class="fa-solid fa-layer-group text-xs"></i></div>
+                                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest" id="category-name">Kombi</div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center"><i class="fa-solid fa-box text-xs"></i></div>
+                                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest" id="stock-count">12 Adet Stokta</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-12 p-10 bg-gray-50 rounded-[2.5rem]">
+                            <div class="text-[10px] font-extrabold text-gray-400 uppercase tracking-[0.2em] mb-2">Peşin Fiyat</div>
+                            <div class="text-5xl font-black text-gray-900" id="product-price">12.500 <span class="text-2xl text-gray-400 font-bold">₺</span></div>
+                        </div>
+
+                        <div class="mb-12">
+                            <h3 class="text-xs font-extrabold text-gray-400 uppercase tracking-[0.2em] mb-6">Ürün Açıklaması</h3>
+                            <p id="product-desc" class="text-gray-600 font-medium leading-relaxed text-lg">
+                                Dijital göstergeli, az kullanılmış hermetik kombi. Sıcak su ve ısıtma için ideal. Teknik ekibimiz tarafından tüm kontrolleri yapılmış ve test edilmiştir.
+                            </p>
+                        </div>
+
+                        <div class="mt-auto space-y-4">
+                            <a id="wa-link" href="https://wa.me/905353418567" target="_blank" class="w-full py-6 bg-green-600 text-white rounded-[2rem] font-extrabold text-lg flex items-center justify-center gap-4 hover:bg-green-700 transition-all shadow-xl shadow-green-100 active:scale-[0.98]">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                WhatsApp ile Bilgi Al
+                            </a>
+                            <a href="tel:+905353418567" class="w-full py-6 bg-gray-900 text-white rounded-[2rem] font-extrabold text-lg flex items-center justify-center gap-4 hover:bg-blue-600 transition-all shadow-xl shadow-gray-100 active:scale-[0.98]">
+                                <i class="fa-solid fa-phone"></i>
+                                Hemen Ara
+                            </a>
+                            <p class="text-center text-[10px] font-bold text-gray-300 uppercase tracking-[0.2em] pt-6 italic">
+                                * Perakende satıştır, montaj hizmetimiz yoktur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        
+        function changeMainImage(src) {
+            const mainImg = document.getElementById('main-img');
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = src;
+                mainImg.style.opacity = '1';
+            }, 200);
+
+            // Aktif kenarlığı güncelle
+            document.querySelectorAll('#image-gallery button').forEach(btn => {
+                const img = btn.querySelector('img');
+                if (img.src === src || img.getAttribute('src') === src) {
+                    btn.classList.add('border-blue-600', 'ring-4', 'ring-blue-50');
+                    btn.classList.remove('border-transparent');
+                } else {
+                    btn.classList.remove('border-blue-600', 'ring-4', 'ring-blue-50');
+                    btn.classList.add('border-transparent');
+                }
+            });
+        }
+
+        async function loadProductDetails() {
+            try {
+                const response = await fetch(`api/products.php?id=${productId}`);
+                if (!response.ok) throw new Error('API not available');
+                const product = await response.json();
+                
+                if (!product || !product.id) {
+                    throw new Error('Ürün bulunamadı');
+                }
+                
+                renderDetails(product);
+            } catch (error) {
+                console.warn('API Hatası veya Ürün Bulunamadı (Yerel Mod Aktif):', error.message);
+                const localProducts = JSON.parse(localStorage.getItem('birer_products')) || [];
+                const product = localProducts.find(p => p.id == productId);
+                if (product) {
+                    renderDetails(product);
+                } else {
+                    document.querySelector('main').innerHTML = `
+                        <div class="container mx-auto text-center py-40">
+                            <h1 class="text-4xl font-bold text-gray-900 mb-8">Ürün Bulunamadı</h1>
+                            <a href="index.html#products" class="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold">Ürünlere Dön</a>
+                        </div>
+                    `;
+                }
+            }
+        }
+
+        function renderDetails(product) {
+            // Update UI
+            document.title = `${product.name} · BİRER`;
+            
+            // Resimleri işle
+            let images = [];
+            try {
+                images = typeof product.images === 'string' ? JSON.parse(product.images) : product.images;
+            } catch(e) { images = [product.images]; }
+            
+            const mainImg = document.getElementById('main-img');
+            mainImg.src = images && images.length > 0 ? images[0] : 'https://via.placeholder.com/600?text=Resim+Yok';
+            mainImg.onerror = function() { this.src = 'https://via.placeholder.com/600?text=Resim+Yok'; };
+            
+            // Küçük resim galerisi oluştur
+            const gallery = document.getElementById('image-gallery');
+            if (gallery) {
+                gallery.innerHTML = images.map((img, idx) => `
+                    <button onclick="changeMainImage('${img}')" class="w-20 h-20 rounded-xl overflow-hidden border-2 ${idx === 0 ? 'border-blue-600' : 'border-transparent'} hover:border-blue-600 transition-all bg-gray-50">
+                        <img src="${img}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/150?text=Resim+Yok'">
+                    </button>
+                `).join('');
+            }
+
+            document.getElementById('product-name').innerText = product.name;
+            document.getElementById('product-price').innerHTML = `${new Intl.NumberFormat('tr-TR').format(product.price)} <span class="text-2xl text-gray-400 font-bold">₺</span>`;
+            document.getElementById('product-desc').innerText = product.description || 'Bu ürün için açıklama bulunmuyor.';
+            document.getElementById('category-name').innerText = (product.category || '').toUpperCase();
+            
+            const badge = document.getElementById('condition-badge');
+            if (parseInt(product.is_new)) {
+                badge.innerText = 'SIFIR ÜRÜN';
+                badge.className = 'inline-block px-5 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em] bg-green-100 text-green-700 mb-6';
+            } else {
+                badge.innerText = '2. EL ÜRÜN';
+                badge.className = 'inline-block px-5 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em] bg-amber-100 text-amber-700 mb-6';
+            }
+
+            // Update Links
+            const waText = `Merhaba, ${product.name} (${product.category}) ürünü hakkında bilgi almak istiyorum.`;
+            document.getElementById('wa-link').href = `https://wa.me/905353418567?text=${encodeURIComponent(waText)}`;
+            const phoneLink = document.querySelector('a[href^="tel:"]');
+            if (phoneLink) phoneLink.href = 'tel:+905353418567';
+        }
+
+        window.onload = loadProductDetails;
+    </script>
+</body>
+</html>
